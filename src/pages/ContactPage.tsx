@@ -41,7 +41,7 @@ export default function ContactPage(){
                             <div className="contact-banner-info">
                                 <a href="tel:0269515535" className="info-link">대표전화 : 02-6951-5535</a>
                                 <span className="info-divider" aria-hidden="true"></span>
-                                <a href="mailto:작성@solutiscnt.co.kr" className="info-link">대표이메일 작성@solutiscnt.co.kr</a>
+                                <a href="mailto:작성@solutiscnt.co.kr" className="info-link">info@solutiscnt.co.kr</a>
                             </div>
                         </div>
                     </div>

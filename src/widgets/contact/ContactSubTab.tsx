@@ -34,7 +34,7 @@ export default function ContactSubTab() {
                   <img src="/assets/images/contact/mail.png" alt="이메일" />
                   <span>이메일</span>
                 </div>
-                <p className="info-text">대표이메일 작성@solutiscnt.co.kr</p>
+                <p className="info-text">info@solutiscnt.co.kr</p>
               </div>
             </div>
 
