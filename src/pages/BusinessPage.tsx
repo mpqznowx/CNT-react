@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Subvisual from "../widgets/common/SubVisual";
 
 type BusinessBullet = {
@@ -88,7 +89,8 @@ const BUSINESS_ITEMS: BusinessItem[] = [
       },
       {
         title: "기업 환경규제 대응 전략",
-        desc: "(탄소국경조정제도(CBAM), EU 에코디자인규정(ESPR), 디지털제품여권(DPP)등)",
+        desc:
+          "(탄소국경조정제도(CBAM), EU 에코디자인규정(ESPR), 디지털제품여권(DPP)등)",
       },
       {
         title: "이해관계자 요구사항 대응",
@@ -176,7 +178,7 @@ function BusinessSectionItem({ item, index }: BusinessSectionItemProps) {
       {
         threshold: 0.2,
         rootMargin: "0px 0px -80px 0px",
-      },
+      }
     );
 
     observer.observe(target);
@@ -188,6 +190,7 @@ function BusinessSectionItem({ item, index }: BusinessSectionItemProps) {
 
   return (
     <article
+      id={item.id}
       ref={itemRef}
       className={`business-info-item ${isVisible ? "is-visible" : ""}`}
       style={{ transitionDelay: `${index * 0.08}s` }}
@@ -221,6 +224,30 @@ function BusinessSectionItem({ item, index }: BusinessSectionItemProps) {
 }
 
 export default function BusinessPage() {
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const sectionId = searchParams.get("section");
+    if (!sectionId) return;
+
+    const timer = window.setTimeout(() => {
+      const target = document.getElementById(sectionId);
+      if (!target) return;
+
+      const headerOffset = 100;
+      const elementTop =
+        target.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementTop - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }, 100);
+
+    return () => window.clearTimeout(timer);
+  }, [searchParams]);
+
   return (
     <>
       <Subvisual
@@ -232,6 +259,7 @@ export default function BusinessPage() {
       <section className="business-info-section">
         <div className="inner">
           <p className="about-eyebrow type about-animate show">사업영역</p>
+
           <div className="business-info-list-wrap">
             {BUSINESS_ITEMS.map((item, index) => (
               <BusinessSectionItem key={item.id} item={item} index={index} />

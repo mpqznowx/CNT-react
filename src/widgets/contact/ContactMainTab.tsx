@@ -16,7 +16,7 @@ export default function ContactMainTab() {
           </div>
           <div className="location-info">
             <div className="location-group">
-              <h3 className="location-title">본사</h3>
+              <h3 className="location-title">본사 오시는 길</h3>
 
               <div className="info-item">
                 <div className="info-label">
@@ -43,17 +43,12 @@ export default function ContactMainTab() {
                 </div>
                 <p className="info-text">info@solutiscnt.co.kr</p>
               </div>
-            </div>
-
-            <div className="location-group traffic-group">
-              <h3 className="location-title">교통편</h3>
-
               <div className="info-item">
                 <div className="info-label">
                   <img src="/assets/images/contact/traffic.png" alt="" />
                   <span>지하철</span>
                 </div>
-                <p className="info-text">
+                <p className="info-text line">
                   7호선 가산디지털단지역 7번출구에서 300m, 도보 5분 이내
                 </p>
               </div>

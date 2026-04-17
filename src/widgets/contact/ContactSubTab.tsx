@@ -15,7 +15,7 @@ export default function ContactSubTab() {
 
           <div className="location-info">
             <div className="location-group">
-              <h3 className="location-title">춘천</h3>
+              <h3 className="location-title">춘천사무실 오시는 길</h3>
 
               <div className="info-item">
                 <div className="info-label">
@@ -27,8 +27,6 @@ export default function ContactSubTab() {
                 </p>
               </div>
 
-              
-
               <div className="info-item">
                 <div className="info-label">
                   <img src="/assets/images/contact/mail.png" alt="이메일" />
@@ -36,19 +34,25 @@ export default function ContactSubTab() {
                 </div>
                 <p className="info-text">info@solutiscnt.co.kr</p>
               </div>
-            </div>
-
-            <div className="location-group traffic-group">
-              <h3 className="location-title">교통편</h3>
-
               <div className="info-item">
                 <div className="info-label">
                   <img src="/assets/images/contact/traffic.png" alt="" />
-                  <span>지하철</span>
+                  <span>경춘선 [남춘천역] 이용시</span>
                 </div>
-                <p className="info-text">경춘선 남춘천역에서 15번 버스 이용</p>
+                <p className="info-text line">도보 15분 소요</p>
+                <p className="info-text line">택시 5분 소요</p>
+                <p className="info-text line">1번 출구 버스정류장에서 마을버스 남산1, 남산2, 신동2, 신동3번 / 지선 15번 버스 이용, 남부사거리 하차 후 도보 90m</p>
+              </div>
+              <div className="info-item">
+                <div className="info-label">
+                  <img src="/assets/images/contact/bus.png" alt="" />
+                  <span>고속버스 이용시</span>
+                </div>
+                <p className="info-text line">[춘천시외버스터미널] 육교 건너 시외버스터미널 정류장에서 마을버스 남면2, 남면3번 이용, 남부사거리 하차 후 도보 90m</p>
               </div>
             </div>
+
+            
           </div>
         </div>
       </section>
