@@ -1111,7 +1111,7 @@ body {
 
 @media all and (max-width: 767px){
 	.visual-box .visual-item {
-		min-height: 520px;
+		min-height: 420px;
 		padding: 60px 20px 0;
 		border-radius: 24px;
 	}
@@ -1620,7 +1620,7 @@ body {
 	background-color: #fff;
 	position: absolute;
 	left: 0;
-	top: 10px;
+	top: 12px;
 }
 
 .traffic-group .info-text {
@@ -1806,7 +1806,7 @@ body {
 
 	.contact-bottom-inner {
 		padding-top: 50px;
-		min-height: auto;
+		min-height: 364px !important;
 		padding-bottom: 50px;
 
 	}
