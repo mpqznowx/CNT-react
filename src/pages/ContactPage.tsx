@@ -30,11 +30,11 @@ export default function ContactPage(){
                                 <h2 className="contact-banner-title">
                                     <img src="/assets/images/contact/quotes-left.png" alt="" className="quote quote-left" />
                                 <img src="/assets/images/contact/quotes-right.png" alt="" className="quote quote-right" />
-                                    <span className="point">솔루티스씨앤티</span> 에 궁금한 사항은<br />
-                                    대표전화로 전화주시면 답변드리도록 하겠습니다.
+                                    당사의 <span className="point">사업영역 및 서비스</span> 관련 문의는<br />
+                                    대표전화로 연락 주시기 바랍니다.
                                 </h2>
                                 <p className="contact-banner-desc">
-                                    더욱 정확한 상담을 원하신다면 상담 문의를 이용하시기 바랍니다.
+                                    정확한 상담을 위해 상담 문의를 이용해 주시면 보다 신속히 안내드리겠습니다.
                                 </p>
                             </div>
 

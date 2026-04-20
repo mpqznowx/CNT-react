@@ -22,7 +22,7 @@ const BUSINESS_ITEMS: BusinessItem[] = [
   {
     id: "policy",
     title: "기후 · 환경정책",
-    enTitle: "Environmental IT Solutions",
+    enTitle: "Climate & Environmental Policy",
     summary:
       "기업의 온실가스 배출 현황을 체계적으로 관리하고, 규제 대응부터 감축 전략까지 전 과정을 지원합니다.",
     bullets: [
