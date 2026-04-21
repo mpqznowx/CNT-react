@@ -33,7 +33,7 @@ export default function ContactMainTab() {
                   <img src="/assets/images/contact/call.png" alt="연락처" />
                   <span>연락처</span>
                 </div>
-                <p className="info-text">(+82) 02-6951-5535</p>
+                <p className="info-text">(+82) 02-6951-5536</p>
               </div>
 
               <div className="info-item">

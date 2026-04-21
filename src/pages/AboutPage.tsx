@@ -60,7 +60,6 @@ export default function AboutPage() {
       <Helmet>
         <title>{currentSEO.title}</title>
         <meta name="description" content={currentSEO.description} />
-        <meta name="robots" content="index,follow" />
 
         {/* canonical (실제 도메인으로 교체 필수) */}
         <link rel="canonical" href="https://www.your-domain.com/about" />

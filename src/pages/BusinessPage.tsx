@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 import Subvisual from "../widgets/common/SubVisual";
 
 type BusinessBullet = {
   title: string;
-  desc?: string;
+  desc?: string[];
 };
 
 type BusinessItem = {
@@ -37,11 +39,11 @@ const BUSINESS_ITEMS: BusinessItem[] = [
       },
       {
         title: "탄소 이니셔티브 대응",
-        desc: "(CDP, SBTi, RE100 등)",
+        desc: ["CDP, SBTi, RE100 등"],
       },
       {
         title: "탄소 규제 대응",
-        desc: "(CBAM 등)",
+        desc: ["CBAM 등"],
       },
     ],
     image: "/assets/images/business/1.png",
@@ -60,7 +62,7 @@ const BUSINESS_ITEMS: BusinessItem[] = [
       },
       {
         title: "정부 및 공공기관의 환경 정책 및 제도 수립 지원",
-        desc: "(ISO14067, Catena-X, TfS, A-LCA 등)",
+        desc: ["ISO14067, Catena-X, TfS, A-LCA 등"],
       },
       {
         title: "LCIDB 구축",
@@ -82,19 +84,20 @@ const BUSINESS_ITEMS: BusinessItem[] = [
     bullets: [
       {
         title: "정부 및 공공기관의 환경 정책 및 제도 수립 지원",
-        desc: "(제품환경, 자연순환, 환경보건 정책 등)",
+        desc: ["제품환경, 자연순환, 환경보건 정책 등"],
       },
       {
         title: "기업 ESG 진단 및 컨설팅",
       },
       {
         title: "기업 환경규제 대응 전략",
-        desc:
-          "(탄소국경조정제도(CBAM), EU 에코디자인규정(ESPR), 디지털제품여권(DPP)등)",
+        desc: [
+          "탄소국경조정제도(CBAM), EU 에코디자인규정(ESPR), 디지털제품여권(DPP) 등",
+        ],
       },
       {
         title: "이해관계자 요구사항 대응",
-        desc: "(환경정보공개, 지속가능경영보고서 등)",
+        desc: ["환경정보공개, 지속가능경영보고서 등"],
       },
     ],
     image: "/assets/images/business/3.png",
@@ -103,25 +106,31 @@ const BUSINESS_ITEMS: BusinessItem[] = [
   },
   {
     id: "cert",
-    title: "환경 인증 컨설팅",
+    title: "환경 검․인증 컨설팅",
     enTitle: "Environmental Certification Consulting",
     summary:
-      "이해관계자 요구사항에 대한 선제적 대응을 위해 LCA 기반의 제품 환경성평가 및 기업의 환경관리 체계 구축과 관련한 인증 컨설팅을 지원합니다.",
+      "이해관계자 요구사항에 대한 선제적 대응을 위해 LCA 기반의 제품 환경성평가 및 기업의 순환자원, 환경관리 체계 구축과 관련한 인증 컨설팅을 지원합니다.",
     bullets: [
       {
         title: "환경성적표지 인증",
       },
       {
         title: "해외 EPD 인증",
-        desc: "(영국 카본트러스트 PCF/EPW, 글로벌 EPD, UL EPD 등)",
+        desc: [
+          "영국 카본트러스트 PCF/EPW, 글로벌 EPD, UL EPD 등",
+          "ISCC GHG 검증",
+        ],
       },
       {
-        title: "자원순환 인증",
-        desc: "(GRS, ISCC, ISCC PLUS 등)",
+        title: "자원순환 검․인증",
+        desc: [
+          "해외 GRS/RCS, ISCC EU/PLUS/CORSIA, UL ECV 인증, ISO 14021 검증",
+          "국내 재생원료 관련 인증 등",
+        ],
       },
       {
         title: "수자원관리 인증",
-        desc: "(AWS(Alliance for Water Stewardship) 등)",
+        desc: ["AWS(Alliance for Water Stewardship) 등"],
       },
     ],
     image: "/assets/images/business/4.png",
@@ -178,7 +187,7 @@ function BusinessSectionItem({ item, index }: BusinessSectionItemProps) {
       {
         threshold: 0.2,
         rootMargin: "0px 0px -80px 0px",
-      }
+      },
     );
 
     observer.observe(target);
@@ -210,9 +219,21 @@ function BusinessSectionItem({ item, index }: BusinessSectionItemProps) {
           <ul className="business-info-list">
             {item.bullets.map((bullet, bulletIndex) => (
               <li key={`${item.id}-${bulletIndex}`}>
-                <span className="business-info-bullet-title">{bullet.title}</span>
+                <span className="business-info-bullet-title">
+                  {bullet.title}
+                </span>
+
                 {bullet.desc && (
-                  <span className="business-info-bullet-desc">{bullet.desc}</span>
+                  <span className="business-info-bullet-desc">
+                    {bullet.desc.map((text, descIndex) => (
+                      <span
+                        key={descIndex}
+                        className="business-info-bullet-desc-line"
+                      >
+                        {text}
+                      </span>
+                    ))}
+                  </span>
                 )}
               </li>
             ))}
@@ -250,6 +271,15 @@ export default function BusinessPage() {
 
   return (
     <>
+      <Helmet>
+        <title>사업영역 | 환경 컨설팅 · ESG · 탄소중립 | 솔루티스 C&T</title>
+        <meta
+          name="description"
+          content="환경 컨설팅, 전과정평가(LCA), ESG 전략 수립, 탄소중립 대응, 환경 인증 및 IT 솔루션까지 솔루티스 C&T의 주요 사업영역을 소개합니다."
+        />
+        <link rel="canonical" href="https://www.your-domain.com/business" />
+      </Helmet>
+
       <Subvisual
         title="사업영역"
         desc="Business area"
