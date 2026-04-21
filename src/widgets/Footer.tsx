@@ -48,7 +48,7 @@ export default function Footer() {
                         </div>
                         <div>
                             <dt>대표번호</dt>
-                            <dd>02-6951-5535</dd>
+                            <dd>02-6951-5536</dd>
                         </div>
                     </dl>
 

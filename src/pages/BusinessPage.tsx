@@ -255,7 +255,7 @@ export default function BusinessPage() {
       const target = document.getElementById(sectionId);
       if (!target) return;
 
-      const headerOffset = 100;
+      const headerOffset = 200;
       const elementTop =
         target.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementTop - headerOffset;
