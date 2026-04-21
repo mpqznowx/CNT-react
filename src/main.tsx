@@ -1,5 +1,5 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { HelmetProvider } from "react-helmet-async";
 
 import App from './app/App.tsx'
 import "aos/dist/aos.css"
@@ -8,7 +8,7 @@ import "./styles/font.css"
 import "./styles/common.css"
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <HelmetProvider>
     <App />
-  </StrictMode>
+  </HelmetProvider>
 )
