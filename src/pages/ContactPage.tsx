@@ -35,7 +35,7 @@ export default function ContactPage() {
       <Helmet>
         <title>{currentSEO.title}</title>
         <meta name="description" content={currentSEO.description} />
-        <link rel="canonical" href="https://www.your-domain.com/contact" />
+        <link rel="canonical" href="https://www.solutiscnt/contact" />
 
       </Helmet>
       <Subvisual title="문의처" desc="Contact us" backgroundClass="contact" />

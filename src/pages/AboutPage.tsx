@@ -62,7 +62,7 @@ export default function AboutPage() {
         <meta name="description" content={currentSEO.description} />
 
         {/* canonical (실제 도메인으로 교체 필수) */}
-        <link rel="canonical" href="https://www.your-domain.com/about" />
+        <link rel="canonical" href="https://www.solutiscnt/about" />
       </Helmet>
       <Subvisual title="소개" desc="About us" backgroundClass="about" />
 

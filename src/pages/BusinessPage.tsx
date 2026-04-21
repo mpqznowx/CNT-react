@@ -277,7 +277,7 @@ export default function BusinessPage() {
           name="description"
           content="환경 컨설팅, 전과정평가(LCA), ESG 전략 수립, 탄소중립 대응, 환경 인증 및 IT 솔루션까지 솔루티스 C&T의 주요 사업영역을 소개합니다."
         />
-        <link rel="canonical" href="https://www.your-domain.com/business" />
+        <link rel="canonical" href="https://www.solutiscnt/business" />
       </Helmet>
 
       <Subvisual

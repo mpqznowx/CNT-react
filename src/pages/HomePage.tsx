@@ -19,7 +19,7 @@ export default function HomePage() {
         <meta property="og:description" content="환경 컨설팅 전문 기업" />
 
         {/* ✔ 실제 도메인으로 변경 필수 */}
-        <link rel="canonical" href="https://www.your-domain.com/" />
+        <link rel="canonical" href="https://www.solutiscnt/" />
       </Helmet>
       <MainVisual />
       <ServiceSection />
